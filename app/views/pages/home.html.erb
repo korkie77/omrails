@@ -1,11 +1,14 @@
+<% if user_signed_in? %>
+	<h1> You're logged in!</h1>
+<% else %>
+	<div class="hero-unit">
+	<h1>Welcome to KElement!</h1>
+	<p>
+		<%= link_to "Begin KElement", '#', class: "btn btn-primary btn-large" %>
 
-<div class="hero-unit">
-<h1>Welcome to Incorpy!</h1>
-<p>
-	<%= link_to "Begin Incorpy", '#', class: "btn btn-primary btn-large" %>
-
-</p>
-</p> 
-	<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
-</p>
-</div>
+	</p>
+	</p> 
+		<%= link_to "Sign Up Now!", "users/sign_up", class: "btn btn-primary btn-large" %>
+	</p>
+	</div>
+<% end %>
